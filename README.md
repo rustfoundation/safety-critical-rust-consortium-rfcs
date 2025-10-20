@@ -51,6 +51,9 @@ but may include the following.
 
 Some changes do not require an RFC:
 
+  - Typical "line of business"-style work, such as adding a new coding guideline
+    or small reworkings of process within contributions to the coding guidelines
+    for the Safety-Critical Rust Coding Guidelines
   - Rephrasing, reorganizing, refactoring, or otherwise "changing shape does
     not change meaning".
   - Additions that strictly improve objective, numerical quality criteria
