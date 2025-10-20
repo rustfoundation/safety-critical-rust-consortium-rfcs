@@ -1,25 +1,27 @@
-# Rust RFCs - [RFC Book](https://rust-lang.github.io/rfcs/) - [Active RFC List](https://rfcbot.rs/)
+# Safety-Critical Rust Consortium RFCs
 
-[Rust RFCs]: #rust-rfcs
+[Safety-Critical Rust Consortium RFCs]: #scrc-rfcs
 
 The "RFC" (request for comments) process is intended to provide a consistent
-and controlled path for changes to Rust (such as new features) so that all
-stakeholders can be confident about the direction of the project.
+and controlled path for changes to the Safety-Critical Rust Consortium and
+its artifacts (such as new subcommittees, new initiatives) so that all
+stakeholders can be confident about the direction of the Consortium.
 
 Many changes, including bug fixes and documentation improvements can be
 implemented and reviewed via the normal GitHub pull request workflow.
 
 Some changes though are "substantial", and we ask that these be put through a
 bit of a design process and produce a consensus among the Rust community and
-the [sub-team]s.
+the [subcommittee][subcommittees].
+
 
 ## Table of Contents
 [Table of Contents]: #table-of-contents
 
-  - [Opening](#rust-rfcs)
+  - [Opening](#scrc-rfcs)
   - [Table of Contents]
   - [When you need to follow this process]
-  - [Sub-team specific guidelines]
+  - [Subcommittee specific guidelines]
   - [Before creating an RFC]
   - [What the process is]
   - [The RFC life-cycle]
@@ -27,24 +29,25 @@ the [sub-team]s.
   - [Implementing an RFC]
   - [RFC Postponement]
   - [Help this is all too informal!]
-  - [License]
-  - [Contributions]
+  - [Code of Conduct](#code-of-conduct)
+  - [Contributing]
+  - [Licenses]
+  - [Other Policies]
 
 
 ## When you need to follow this process
 [When you need to follow this process]: #when-you-need-to-follow-this-process
 
 You need to follow this process if you intend to make "substantial" changes to
-Rust, Cargo, Crates.io, or the RFC process itself. What constitutes a
-"substantial" change is evolving based on community norms and varies depending
-on what part of the ecosystem you are proposing to change, but may include the
-following.
+artifacts produced by the Consortium, subcommittee charters or the RFC process itself.
+What constitutes a "substantial" change is evolving based on community norms
+and varies depending on what part of the ecosystem you are proposing to change,
+but may include the following.
 
-  - Any semantic or syntactic change to the language that is not a bugfix.
-  - Removing language features, including those that are feature-gated.
-  - Changes to the interface between the compiler and libraries, including lang
-    items and intrinsics.
-  - Additions to `std`.
+  - Proposals which result in substantial changes to the artifacts the
+    Consortium produces (such as the [Safety-Critical Rust Coding Guidelines]
+    [safety-critical-rust-coding-guidelines]).
+  - Creation / dissolution of a [subcommittee].
 
 Some changes do not require an RFC:
 
@@ -53,22 +56,17 @@ Some changes do not require an RFC:
   - Additions that strictly improve objective, numerical quality criteria
     (warning removal, speedup, better platform coverage, more parallelism, trap
     more errors, etc.)
-  - Additions only likely to be _noticed by_ other developers-of-rust,
-    invisible to users-of-rust.
+  - Additions only likely to be _noticed by_ other contributors to artifacts,
+    invisible to users of artifacts.
 
 If you submit a pull request to implement a new feature without going through
 the RFC process, it may be closed with a polite request to submit an RFC first.
 
 
-### Sub-team specific guidelines
-[Sub-team specific guidelines]: #sub-team-specific-guidelines
+### Subcommittee specific guidelines
+[Subcommittee specific guidelines]: #subcommittee-specific-guidelines
 
-For more details on when an RFC is required for the following areas, please see
-the Rust community's [sub-team] specific guidelines for:
-
-  - [language changes](lang_changes.md),
-  - [library changes](libs_changes.md),
-  - [compiler changes](compiler_changes.md).
+Currently there are no subcommittee specific guidelines.
 
 
 ## Before creating an RFC
@@ -86,22 +84,22 @@ beforehand, to ascertain that the RFC may be desirable; having a consistent
 impact on the project requires concerted effort toward consensus-building.
 
 The most common preparations for writing and submitting an RFC include talking
-the idea over on our [official Zulip server], discussing the topic on our
-[developer discussion forum], and occasionally posting "pre-RFCs" on the
-developer forum. You may file issues on this repo for discussion, but these are
-not actively looked at by the teams.
+the idea over on our [official Zulip channel] and occasionally posting
+"pre-RFCs" on the Zulip channel. You may file issues on this repo for discussion,
+but these are not actively looked at by the subcommittees.
 
 As a rule of thumb, receiving encouraging feedback from long-standing project
-developers, and particularly members of the relevant [sub-team] is a good
+developers, and particularly members of the relevant [subcommittee] is a good
 indication that the RFC is worth pursuing.
 
 
 ## What the process is
 [What the process is]: #what-the-process-is
 
-In short, to get a major feature added to Rust, one must first get the RFC
-merged into the RFC repository as a markdown file. At that point the RFC is
-"active" and may be implemented with the goal of eventual inclusion into Rust.
+In short, to get a major change made added to the Safety-Critical Rust
+Consortium or its artifacts, one must first get the RFC merged into the
+RFC repository as a markdown file. At that point the RFC is "active"
+and may be implemented with the goal of eventual inclusion.
 
   - Fork the RFC repo [RFC repository]
   - Copy `0000-template.md` to `text/0000-my-feature.md` (where "my-feature" is
@@ -117,14 +115,14 @@ merged into the RFC repository as a markdown file. At that point the RFC is
   - Now that your RFC has an open pull request, use the issue number of the PR
     to rename the file: update your `0000-` prefix to that number. Also
     update the "RFC PR" link at the top of the file.
-  - Each pull request will be labeled with the most relevant [sub-team], which
-    will lead to its being triaged by that team in a future meeting and assigned
-    to a member of the subteam.
+  - Each pull request will be labeled with the most relevant [subcommittee], which
+    will lead to its being triaged by that subcommittee in a future meeting and assigned
+    to a member of the subcommittee.
   - Build consensus and integrate feedback. RFCs that have broad support are
     much more likely to make progress than those that don't receive any
     comments. Feel free to reach out to the RFC assignee in particular to get
     help identifying stakeholders and obstacles.
-  - The sub-team will discuss the RFC pull request, as much as possible in the
+  - The subcommittee will discuss the RFC pull request, as much as possible in the
     comment thread of the pull request itself. Offline discussion will be
     summarized on the pull request comment thread.
   - RFCs rarely go through this process unchanged, especially as alternatives
@@ -133,28 +131,27 @@ merged into the RFC repository as a markdown file. At that point the RFC is
     request, and leave a comment on the pull request explaining your changes.
     **Specifically, do not squash or rebase commits after they are visible on
     the pull request.**
-  - At some point, a member of the subteam will propose a "motion for final
+  - At some point, a member of the subcommittee will propose a "motion for final
     comment period" (FCP), along with a *disposition* for the RFC (merge, close,
     or postpone).
     - This step is taken when enough of the tradeoffs have been discussed that
-      the subteam is in a position to make a decision. That does not require
+      the subcommittee is in a position to make a decision. That does not require
       consensus amongst all participants in the RFC thread (which is usually
       impossible). However, the argument supporting the disposition on the RFC
       needs to have already been clearly articulated, and there should not be a
-      strong consensus *against* that position outside of the subteam. Subteam
-      members use their best judgment in taking this step, and the FCP itself
-      ensures there is ample time and notification for stakeholders to push
-      back if it is made prematurely.
+      strong consensus *against* that position outside of the subcommittee.
+      Subcommittee members use their best judgment in taking this step, and the
+      FCP itself ensures there is ample time and notification for stakeholders
+      to push back if it is made prematurely.
     - For RFCs with lengthy discussion, the motion to FCP is usually preceded by
       a *summary comment* trying to lay out the current state of the discussion
       and major tradeoffs/points of disagreement.
-    - Before actually entering FCP, *all* members of the subteam must sign off;
-      this is often the point at which many subteam members first review the
+    - Before actually entering FCP, *all* members of the subcommittee must sign off;
+      this is often the point at which many subcommittee members first review the
       RFC in full depth.
   - The FCP lasts ten calendar days, so that it is open for at least 5 business
-    days. It is also advertised widely,
-    e.g. in [This Week in Rust](https://this-week-in-rust.org/). This way all
-    stakeholders have a chance to lodge any final objections before a decision
+    days. It is also advertised widely, e.g. in the Consortium mailing list. This
+    way all stakeholders have a chance to lodge any final objections before a decision
     is reached.
   - In most cases, the FCP period is quiet, and the RFC is either merged or
     closed. However, sometimes substantial new arguments or ideas are raised,
@@ -164,45 +161,46 @@ merged into the RFC repository as a markdown file. At that point the RFC is
 [The RFC life-cycle]: #the-rfc-life-cycle
 
 Once an RFC becomes "active" then authors may implement it and submit the
-feature as a pull request to the Rust repo. Being "active" is not a rubber
-stamp, and in particular still does not mean the feature will ultimately be
-merged; it does mean that in principle all the major stakeholders have agreed
+feature as a pull request to the relevant Consortium repo. Being "active" is not
+a rubber stamp, and in particular still does not mean the feature will ultimately
+be merged; it does mean that in principle all the major stakeholders have agreed
 to the feature and are amenable to merging it.
 
 Furthermore, the fact that a given RFC has been accepted and is "active"
 implies nothing about what priority is assigned to its implementation, nor does
-it imply anything about whether a Rust developer has been assigned the task of
+it imply anything about whether a developer or writer has been assigned the task of
 implementing the feature. While it is not *necessary* that the author of the
 RFC also write the implementation, it is by far the most effective way to see
 an RFC through to completion: authors should not expect that other project
-developers will take on responsibility for implementing their accepted feature.
+developers or writers will take on responsibility for implementing their accepted
+feature.
 
 Modifications to "active" RFCs can be done in follow-up pull requests. We
 strive to write each RFC in a manner that it will reflect the final design of
 the feature; but the nature of the process means that we cannot expect every
 merged RFC to actually reflect what the end result will be at the time of the
-next major release.
+next major release of an impacted Consortium artifact.
 
 In general, once accepted, RFCs should not be substantially changed. Only very
 minor changes should be submitted as amendments. More substantial changes
 should be new RFCs, with a note added to the original RFC. Exactly what counts
-as a "very minor change" is up to the sub-team to decide; check
-[Sub-team specific guidelines] for more details.
+as a "very minor change" is up to the subcommittee to decide; check
+[Subcommittee specific guidelines] for more details.
 
 
 ## Reviewing RFCs
 [Reviewing RFCs]: #reviewing-rfcs
 
-While the RFC pull request is up, the sub-team may schedule meetings with the
+While the RFC pull request is up, the subcommittee may schedule meetings with the
 author and/or relevant stakeholders to discuss the issues in greater detail,
-and in some cases the topic may be discussed at a sub-team meeting. In either
+and in some cases the topic may be discussed at a subcommittee meeting. In either
 case a summary from the meeting will be posted back to the RFC pull request.
 
-A sub-team makes final decisions about RFCs after the benefits and drawbacks
-are well understood. These decisions can be made at any time, but the sub-team
+A subcommittee makes final decisions about RFCs after the benefits and drawbacks
+are well understood. These decisions can be made at any time, but the subcommittee
 will regularly issue decisions. When a decision is made, the RFC pull request
 will either be merged or closed. In either case, if the reasoning is not clear
-from the discussion in thread, the sub-team will add a comment describing the
+from the discussion in thread, the subcommittee will add a comment describing the
 rationale for the decision.
 
 
@@ -211,14 +209,14 @@ rationale for the decision.
 
 Some accepted RFCs represent vital features that need to be implemented right
 away. Other accepted RFCs can represent features that can wait until some
-arbitrary developer feels like doing the work. Every accepted RFC has an
-associated issue tracking its implementation in the Rust repository; thus that
+arbitrary developer or writer feels like doing the work. Every accepted RFC has an
+associated issue tracking its implementation in the [RFC repository]; thus that
 associated issue can be assigned a priority via the triage process that the
-team uses for all issues in the Rust repository.
+subcommittee uses for all issues in the Rust repository.
 
 The author of an RFC is not obligated to implement it. Of course, the RFC
-author (like any other developer) is welcome to post an implementation for
-review after the RFC has been accepted.
+author (like any other developer or writer) is welcome to post an implementation
+for review after the RFC has been accepted.
 
 If you are interested in working on the implementation for an "active" RFC, but
 cannot determine if someone else is already working on it, feel free to ask
@@ -235,7 +233,7 @@ nor about implementing the described feature until some time in the future, and
 we believe that we can afford to wait until then to do so. Historically,
 "postponed" was used to postpone features until after 1.0. Postponed pull
 requests may be re-opened when the time is right. We don't have any formal
-process for that, you should ask members of the relevant sub-team.
+process for that, you should ask members of the relevant subcommittee.
 
 Usually an RFC pull request marked as "postponed" has already passed an
 informal first round of evaluation, namely the round of "do we think we would
@@ -251,49 +249,33 @@ The process is intended to be as lightweight as reasonable for the present
 circumstances. As usual, we are trying to let the process be driven by
 consensus and community norms, not impose more structure than necessary.
 
+[subcommittee](SUBCOMMITTEES.md)
+[safety-critical-rust-coding-guidelines]: https://github.com/rustfoundation/safety-critical-rust-coding-guidelines
+[official Zulip channel]: https://rust-lang.zulipchat.com/#narrow/channel/445688-safety-critical-consortium
+[RFC repository]: https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs
 
-## License
-[License]: #license
-
-This repository is currently in the process of being licensed under either of:
-
-* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or https://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or https://opensource.org/licenses/MIT)
-
-at your option. Some parts of the repository are already licensed according to those terms. For more see [RFC 2044](https://github.com/rust-lang/rfcs/pull/2044) and its [tracking issue](https://github.com/rust-lang/rust/issues/43461).
-
-
-### Contributions
-[Contributions]: #contributions
-
-Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
-
-
-[official Zulip server]: https://rust-lang.zulipchat.com/
-[developer discussion forum]: https://internals.rust-lang.org/
-[RFC repository]: https://github.com/rust-lang/rfcs
-[sub-team]: https://www.rust-lang.org/team.html
-
-# PROJECT NAME
-
-Project Description
 
 ## [Code of Conduct][code-of-conduct]
+
 
 The [Rust Foundation][rust-foundation] has adopted a Code of Conduct that we
 expect project participants to adhere to. Please read [the full
 text][code-of-conduct] so that you can understand what actions will and will not
 be tolerated.
 
+
 ## Contributing
+[Contributing]: #contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+
 ## Licenses
+[Licenses]: #licenses
 
 Rust is primarily distributed under the terms of both the MIT license and the
 Apache License (Version 2.0), with documentation portions covered by the
-Creative Commons Attribution 4.0 International license..
+Creative Commons Attribution 4.0 International license.
 
 See [LICENSE-APACHE](LICENSE-APACHE), [LICENSE-MIT](LICENSE-MIT),
 [LICENSE-documentation](LICENSE-documentation), and
@@ -302,7 +284,9 @@ See [LICENSE-APACHE](LICENSE-APACHE), [LICENSE-MIT](LICENSE-MIT),
 You can also read more under the Foundation's [intellectual property
 policy][ip-policy].
 
+
 ## Other Policies
+[Other Policies]: #other-policies
 
 You can read about other Rust Foundation policies on the [Rust Foundation
 website][policies].
