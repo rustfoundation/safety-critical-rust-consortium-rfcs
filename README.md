@@ -380,11 +380,6 @@ The process is intended to be as lightweight as reasonable for the present
 circumstances. As usual, we are trying to let the process be driven by
 consensus and community norms, not impose more structure than necessary.
 
-[subcommittee](SUBCOMMITTEES.md)
-[safety-critical-rust-coding-guidelines]: https://github.com/rustfoundation/safety-critical-rust-coding-guidelines
-[official Zulip channel]: https://rust-lang.zulipchat.com/#narrow/channel/445688-safety-critical-consortium
-[RFC repository]: https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs
-
 
 ## [Code of Conduct][code-of-conduct]
 
@@ -427,3 +422,7 @@ website][policies].
 [media-guide and trademark]: https://rustfoundation.org/policy/trademark-policy/
 [policies]: https://rustfoundation.org/policies-resources/
 [rust-foundation]: https://rustfoundation.org/
+[subcommittee]: SUBCOMMITTEES.md
+[safety-critical-rust-coding-guidelines]: https://github.com/rustfoundation/safety-critical-rust-coding-guidelines
+[official Zulip channel]: https://rust-lang.zulipchat.com/#narrow/channel/445688-safety-critical-consortium
+[RFC repository]: https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs
