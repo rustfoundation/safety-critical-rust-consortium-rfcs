@@ -285,6 +285,11 @@ team has done its job of communicating the values and priorities, it should be
 possible to fit the debate about the RFC into that framework and reach a fairly
 clear outcome.
 
+Each RFC has a shepherd drawn from the relevant subcommittee. The shepherd is
+responsible for driving the consensus process -- working with both the RFC
+author and the broader community to dig out problems, alternatives, and improved
+design, always working to reach broader consensus.
+
 [consensus]: http://en.wikipedia.org/wiki/Consensus_decision-making
 
 ### Lack of consensus
@@ -336,41 +341,6 @@ We follow the below process for a blocking concern:
      the author, and the remainder of the subcommittee are **unable** to resolve
      the concern, the blocking concern process is deemed to not have succeeded.
      Return to [Lack of consensus] for further stages.
-
-### How and when RFC decisions are made, and the "final comment period"
-
-Each RFC has a shepherd drawn from the relevant subcommittee. The shepherd is
-responsible for driving the consensus process -- working with both the RFC
-author and the broader community to dig out problems, alternatives, and improved
-design, always working to reach broader consensus.
-
-At some point, the RFC comments will reach a kind of "steady state", where no
-new tradeoffs are being discovered, and either objections have been addressed,
-or it's clear that the design has fundamental downsides that need to be weighed.
-
-At that point, the shepherd will announce that the RFC is in a "final comment
-period" (which lasts for ten days). This is a kind of "last call" for strong
-objections to the RFC. **The announcement of the final comment period for an RFC
-should be very visible**; it should be included in the subcommittee's periodic
-communications.
-
-> Note that the final comment period is in part intended to help keep RFCs
-> moving. Historically, RFCs sometimes stall out at a point where discussion has
-> died down but a decision isn't needed urgently. In this proposed model, the
-> RFC author could ask the shepherd to move to the final comment period (and
-> hence toward a decision).
-
-After the final comment period, the subcommittee can make a decision on the RFC. The
-role of the subteam at that point is *not* to reveal any new technical issues or
-arguments; if these come up during discussion, they should be added as comments
-to the RFC, and it should undergo another final comment period.
-
-Instead, the subteam decision is based on **weighing the already-revealed
-tradeoffs against the Consortium's priorities and values** (which the leadership team
-is responsible for setting, globally). In the end, these decisions are about how to
-weight tradeoffs. The decision should be communicated in these terms, pointing
-out the tradeoffs that were raised and explaining how they were weighted, and
-**never introducing new arguments**.
 
 
 ### Help this is all too informal!
