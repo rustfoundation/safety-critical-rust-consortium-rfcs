@@ -28,6 +28,7 @@ the [subcommittee][subcommittees].
   - [Reviewing RFCs]
   - [Implementing an RFC]
   - [RFC Postponement]
+  - [Decision making](#decision-making)
   - [Help this is all too informal!]
   - [Code of Conduct](#code-of-conduct)
   - [Contributing]
@@ -243,6 +244,133 @@ informal first round of evaluation, namely the round of "do we think we would
 ever possibly consider making this change, as outlined in the RFC pull request,
 or some semi-obvious variation of it." (When the answer to the latter question
 is "no", then the appropriate response is to close the RFC, not postpone it.)
+
+## Decision-making
+[Decision-making]: #decision-making
+
+### Consensus
+
+In a nutshell the premise  of [consensus decision-making][consensus] is that
+a successful outcome is not where one side of a debate has "won", but rather
+where concerns from *all* sides have been addressed in some way. **This
+emphatically does not entail design by committee, nor compromised design**.
+Rather, it's a recognition that
+
+> ... every design or implementation choice carries a trade-off and numerous
+> costs. There is seldom a right answer.
+
+Breakthrough designs sometimes end up changing the playing field by eliminating
+tradeoffs altogether, but more often difficult decisions have to be made. **The
+key is to have a clear vision and set of values and priorities**, which is the
+leadership team's responsibility to set and communicate, and the subcommittee's
+responsibility to act upon.
+
+Whenever possible, we seek to reach consensus through discussion and design
+revision. Concretely, the steps are:
+
+* Initial RFC proposed, with initial analysis of tradeoffs.
+* Comments reveal additional drawbacks, problems, or tradeoffs.
+* RFC revised to address comments, often by improving the design.
+* Repeat above until "major objections" are fully addressed, or it's clear that
+  there is a fundamental choice to be made.
+
+Consensus is reached when most people are left with only "minor" objections,
+i.e., while they might choose the tradeoffs slightly differently they do not
+feel a strong need to *actively block* the RFC from progressing.
+
+One important question is: consensus among which people, exactly? Of course, the
+broader the consensus, the better. But at the very least, **consensus within the
+members of the subcommittee should be the norm for most decisions.** If the leadership
+team has done its job of communicating the values and priorities, it should be
+possible to fit the debate about the RFC into that framework and reach a fairly
+clear outcome.
+
+[consensus]: http://en.wikipedia.org/wiki/Consensus_decision-making
+
+### Lack of consensus
+[Lack of consensus]: #lack-of-consensus
+
+In some cases, though, consensus cannot be reached. These cases tend to split
+into two very different camps:
+
+* "Trivial" reasons, e.g., there is not widespread agreement about naming, but
+  there is consensus about the substance.
+
+* "Deep" reasons, e.g., the design fundamentally improves one set of concerns at
+  the expense of another, and people on both sides feel strongly about it.
+
+In either case, an alternative form of decision-making is needed.
+
+* For the "trivial" case, usually either the RFC shepherd or subcommittee chair will
+  make an executive decision.
+
+* For the "deep" case, there are a few stages this can progress through.
+  If resolved at any stage, no further stages need be visited for that "deep" case
+  item.
+  1. A subcommittee member raises what they believe to be a blocking concern on the
+     RFC. See [Blocking concern process] for the details. If the blocking concern
+     cannot be resolved through that process, proceed to the next stage.
+  2. The subcommitee chair is empowered to make a final decision, but should consult
+     with the the leadership team before doing so.
+
+The decision on which camp a decision falls into is the responsiblity of the
+subcommittee chair, although they should consult with the leadership team if
+there's doubt raised on the RFC.
+
+#### Blocking concern process
+[Blocking concern process]: #blocking-concern-process
+
+We follow the below process for a blocking concern:
+
+  1. A subcommittee member raises what they believe to be a blocking concern on the
+     RFC. Included with their blocking concern comment they must include a
+     reasonable length piece of writing outlining concerns and alternatives.
+  2. The RFC shepherd is responsible for working with the author and the
+     subcommittee to attempt to drive to resolution during the ten day period
+     from blocking concern being opened.
+  3. If working together, the subcommittee member that raised the blocking concern,
+     the author, and the remainder of the subcommittee are able to resolve the
+     concern, the RFC is updated to reflect the chosen resolution by the author.
+     Done.
+  4. If working together, the subcommittee member that raised the blocking concern,
+     the author, and the remainder of the subcommittee are **unable** to resolve
+     the concern, the blocking concern process is deemed to not have succeeded.
+     Return to [Lack of consensus] for further stages.
+
+### How and when RFC decisions are made, and the "final comment period"
+
+Each RFC has a shepherd drawn from the relevant subcommittee. The shepherd is
+responsible for driving the consensus process -- working with both the RFC
+author and the broader community to dig out problems, alternatives, and improved
+design, always working to reach broader consensus.
+
+At some point, the RFC comments will reach a kind of "steady state", where no
+new tradeoffs are being discovered, and either objections have been addressed,
+or it's clear that the design has fundamental downsides that need to be weighed.
+
+At that point, the shepherd will announce that the RFC is in a "final comment
+period" (which lasts for ten days). This is a kind of "last call" for strong
+objections to the RFC. **The announcement of the final comment period for an RFC
+should be very visible**; it should be included in the subcommittee's periodic
+communications.
+
+> Note that the final comment period is in part intended to help keep RFCs
+> moving. Historically, RFCs sometimes stall out at a point where discussion has
+> died down but a decision isn't needed urgently. In this proposed model, the
+> RFC author could ask the shepherd to move to the final comment period (and
+> hence toward a decision).
+
+After the final comment period, the subcommittee can make a decision on the RFC. The
+role of the subteam at that point is *not* to reveal any new technical issues or
+arguments; if these come up during discussion, they should be added as comments
+to the RFC, and it should undergo another final comment period.
+
+Instead, the subteam decision is based on **weighing the already-revealed
+tradeoffs against the Consortium's priorities and values** (which the leadership team
+is responsible for setting, globally). In the end, these decisions are about how to
+weight tradeoffs. The decision should be communicated in these terms, pointing
+out the tradeoffs that were raised and explaining how they were weighted, and
+**never introducing new arguments**.
 
 
 ### Help this is all too informal!
