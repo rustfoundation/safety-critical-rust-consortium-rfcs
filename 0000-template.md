@@ -1,12 +1,12 @@
-- Feature Name: (fill me in with a unique ident, `my_awesome_feature`)
+- Change Name: (fill me in with a unique ident, `my_awesome_change`)
 - Start Date: (fill me in with today's date, YYYY-MM-DD)
-- RFC PR: [rust-lang/rfcs#0000](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/pull/0000)
-- Rust Issue: [rust-lang/rust#0000](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/issues/0000)
+- RFC PR: [safety-critical-rust-consortium-rfcs/rfcs#0000](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/pull/0000)
+- Issue: [safety-critical-rust-consortium-rfcs/issues#0000](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/issues/0000)
 
 # Summary
 [summary]: #summary
 
-One paragraph explanation of the feature.
+One paragraph explanation of the change.
 
 # Motivation
 [motivation]: #motivation
@@ -14,8 +14,8 @@ One paragraph explanation of the feature.
 Any changes to Safety-Critical Rust Consortium artifacts should focus on solving a problem that users of Rust are having related to safety-critical domain usage.
 This section should explain this problem in detail, including necessary background.
 
-It should also contain several specific use cases where this feature can help a user, and explain how it helps.
-This can then be used to guide the design of the feature or artifact.
+It should also contain several specific use cases where this change can help a user, and explain how it helps.
+This can then be used to guide the design of the change or artifact.
 
 This section is one of the most important sections of any RFC, and can be lengthy.
 
@@ -25,11 +25,11 @@ This section is one of the most important sections of any RFC, and can be length
 Explain the proposal as if it was already included in the Consortium and you were teaching it to another safety-critical Rust programmer or functional safety engineer. That generally means:
 
 - Introducing new named concepts.
-- Explaining the feature largely in terms of examples.
-- Explaining how safety-critical users should *think* about the feature, and how it should impact the way they use Rust. It should explain the impact as concretely as possible.
+- Explaining the change largely in terms of examples.
+- Explaining how safety-critical users should *think* about the change, and how it should impact the way they use Rust. It should explain the impact as concretely as possible.
 - If applicable, provide sample error messages, deprecation warnings, or migration guidance.
 - If applicable, describe the differences between teaching this to existing safety-critical Rust programmers and new safety-critical Rust programmers.
-- Discuss how this impacts the ability to read, understand, and maintain safety-critical Rust code. Code is read and modified far more often than written; will the proposed feature make code easier to maintain?
+- Discuss how this impacts the ability to read, understand, and maintain safety-critical Rust code. Code is read and modified far more often than written; will the proposed change make code easier to maintain?
 
 For implementation-oriented RFCs (e.g. operational details around Safety-Critical Rust Coding Guidelines), this section should focus on how contributors should think about the change, and give examples of its concrete impact. For policy RFCs, this section should provide an example-driven introduction to the policy, and explain its impact in concrete terms.
 
@@ -39,7 +39,7 @@ For implementation-oriented RFCs (e.g. operational details around Safety-Critica
 This is the technical portion of the RFC. Explain the design in sufficient detail that:
 
 - Its interaction with other features and artifacts is clear.
-- It is reasonably clear how the feature or artifact would be implemented.
+- It is reasonably clear how the change or feature or artifact would be implemented.
 - Corner cases are dissected by example.
 
 The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
@@ -79,7 +79,7 @@ Please also take into consideration that the Safety-Critical Rust Consortium som
 [unresolved-questions]: #unresolved-questions
 
 - What parts of the design do you expect to resolve through the RFC process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
+- What parts of the design do you expect to resolve through the implementation of this change before stabilization?
 - What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
 
 # Future possibilities

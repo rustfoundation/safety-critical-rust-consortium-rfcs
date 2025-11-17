@@ -63,8 +63,9 @@ Some changes do not require an RFC:
   - Additions only likely to be _noticed by_ other contributors to artifacts,
     invisible to users of artifacts.
 
-If you submit a pull request to implement a new feature without going through
-the RFC process, it may be closed with a polite request to submit an RFC first.
+If you submit a pull request or make some change to how a process is run without
+going through the RFC process, the PR may be closed or changes reverted with a
+note left to submit an RFC first.
 
 
 ### Subcommittee specific guidelines
@@ -77,7 +78,7 @@ Currently there are no subcommittee specific guidelines.
 [Before creating an RFC]: #before-creating-an-rfc
 
 A hastily-proposed RFC can hurt its chances of acceptance. Low quality
-proposals, proposals for previously-rejected features, or those that don't fit
+proposals, proposals for previously-rejected changes, or those that don't fit
 into the near-term roadmap, may be quickly rejected, which can be demotivating
 for the unprepared contributor. Laying some groundwork ahead of the RFC can
 make the process smoother.
@@ -106,7 +107,7 @@ RFC repository as a markdown file. At that point the RFC is "active"
 and may be implemented with the goal of eventual inclusion.
 
   - Fork the RFC repo [RFC repository]
-  - Copy `0000-template.md` to `text/0000-my-feature.md` (where "my-feature" is
+  - Copy `0000-template.md` to `text/0000-my-change.md` (where "my-change" is
     descriptive). Don't assign an RFC number yet; This is going to be the PR
     number and we'll rename the file accordingly if the RFC is accepted.
   - Fill in the RFC. Put care into the details: RFCs that do not present
@@ -165,23 +166,23 @@ and may be implemented with the goal of eventual inclusion.
 [The RFC life-cycle]: #the-rfc-life-cycle
 
 Once an RFC becomes "active" then authors may implement it and submit the
-feature as a pull request to the relevant Consortium repo. Being "active" is not
-a rubber stamp, and in particular still does not mean the feature will ultimately
+change as a pull request to the relevant Consortium repo. Being "active" is not
+a rubber stamp, and in particular still does not mean the change will ultimately
 be merged; it does mean that in principle all the major stakeholders have agreed
-to the feature and are amenable to merging it.
+to the change and are amenable to merging it.
 
 Furthermore, the fact that a given RFC has been accepted and is "active"
 implies nothing about what priority is assigned to its implementation, nor does
 it imply anything about whether a developer or writer has been assigned the task of
-implementing the feature. While it is not *necessary* that the author of the
+implementing the change. While it is not *necessary* that the author of the
 RFC also write the implementation, it is by far the most effective way to see
 an RFC through to completion: authors should not expect that other project
 developers or writers will take on responsibility for implementing their accepted
-feature.
+change.
 
 Modifications to "active" RFCs can be done in follow-up pull requests. We
 strive to write each RFC in a manner that it will reflect the final design of
-the feature; but the nature of the process means that we cannot expect every
+the change; but the nature of the process means that we cannot expect every
 merged RFC to actually reflect what the end result will be at the time of the
 next major release of an impacted Consortium artifact.
 
@@ -211,8 +212,8 @@ rationale for the decision.
 ## Implementing an RFC
 [Implementing an RFC]: #implementing-an-rfc
 
-Some accepted RFCs represent vital features that need to be implemented right
-away. Other accepted RFCs can represent features that can wait until some
+Some accepted RFCs represent vital changes that need to be implemented right
+away. Other accepted RFCs can represent changes that can wait until some
 arbitrary developer or writer feels like doing the work. Every accepted RFC has an
 associated issue tracking its implementation in the [RFC repository]; thus that
 associated issue can be assigned a priority via the triage process that the
@@ -233,9 +234,9 @@ cannot determine if someone else is already working on it, feel free to ask
 Some RFC pull requests are tagged with the "postponed" label when they are
 closed (as part of the rejection process). An RFC closed with "postponed" is
 marked as such because we want neither to think about evaluating the proposal
-nor about implementing the described feature until some time in the future, and
+nor about implementing the described change until some time in the future, and
 we believe that we can afford to wait until then to do so. Historically,
-"postponed" was used to postpone features until after 1.0. Postponed pull
+"postponed" was used to postpone changes until after 1.0. Postponed pull
 requests may be re-opened when the time is right. We don't have any formal
 process for that, you should ask members of the relevant subcommittee.
 
