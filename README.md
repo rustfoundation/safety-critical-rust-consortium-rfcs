@@ -316,10 +316,10 @@ In either case, an alternative form of decision-making is needed.
   1. A subcommittee member raises what they believe to be a blocking concern on the
      RFC. See [Blocking concern process] for the details. If the blocking concern
      cannot be resolved through that process, proceed to the next stage.
-  2. The subcommitee chair is empowered to make a final decision, but should consult
+  2. The subcommittee chair is empowered to make a final decision, but should consult
      with the the leadership team before doing so.
 
-The decision on which camp a decision falls into is the responsiblity of the
+The decision on which camp a decision falls into is the responsibility of the
 subcommittee chair, although they should consult with the leadership team if
 there's doubt raised on the RFC.
 
