@@ -1,7 +1,7 @@
 - Change Name: `consortium_operations_baseline`
 - Start Date: 2026-01-10
-- RFC PR: [safety-critical-rust-consortium-rfcs/rfcs#0000](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/pull/0000)
-- Issue: [safety-critical-rust-consortium-rfcs/issues#0000](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/issues/0000)
+- RFC PR: [safety-critical-rust-consortium-rfcs/rfcs#0001](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/pull/4)
+- Issue: [safety-critical-rust-consortium-rfcs/issues#0005](https://github.com/rustfoundation/safety-critical-rust-consortium-rfcs/issues/5)
 
 # Summary
 [summary]: #summary
